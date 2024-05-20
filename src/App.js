@@ -3,18 +3,6 @@ import "./css/App.css";
 import Ammo from "./pages/ammo";
 
 function App() {
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   const toggleVisibility = () => {
-//     setIsVisible(!isVisible);
-//   };
-//   <button onClick={toggleVisibility}>
-//   {isVisible ? "Hide Data" : "Show Data"}
-// </button>
-// {isVisible && (
-// <div id="data"> <h1>Hello Julie I am State</h1></div>
-// )}
-
   return (
     <div className="App-background">
       <h1>Elden Ring Project</h1>
