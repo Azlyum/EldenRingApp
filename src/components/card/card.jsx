@@ -1,20 +1,19 @@
 import React from "react";
+import "../../css/Card.css";
 
 const SimpleCard = ({ title, subTitle, content, image }) => {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        padding: "16px",
-        margin: "8px",
-        width: "1500px",
-      }}
-    >
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <h3>{subTitle}</h3>
-      <p>{content}</p>
+    <div className="flip-card">
+      <div className="flip-card-inner">
+        <div className="flip-card-front">
+          <img src={image} alt={title} className="imageStyle" />
+        </div>
+        <div className="flip-card-back">
+          <h1>{title}</h1>
+          <p>{subTitle}</p>
+          <p>{content}</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,10 +1,27 @@
-import React, { setState, useState } from "react";
+import React from "react";
 import "./css/App.css";
-import Ammo from "./pages/ammo";
+import {
+  Ammo,
+  Armor,
+  AshesOfWar,
+  Bosses,
+  Classes,
+  Creatures,
+  Incantations,
+  Items,
+  Locations,
+  Npc,
+  Shields,
+  Sorceries,
+  Spirit,
+  Talisman,
+  Weapon
+} from './components/InGameElements/Index';
 
 function App() {
   return (
     <div className="App-background">
+    <div className="foo">
       <h1>Elden Ring Project</h1>
       <p>
         This is a Project i created for myself <br />I am also wanting to show
@@ -13,10 +30,25 @@ function App() {
       </p>
 
       <img src="./EldenRingMain01.jpg" alt="of the cover art for Elden Ring" />
-      <div>
-       <Ammo />
-      </div>
     </div>
+    <div>
+       <Ammo />
+       <Armor />
+      <AshesOfWar />
+      <Bosses />
+      <Classes />
+      <Creatures />
+      <Incantations />
+      <Items />
+      <Locations />
+      <Npc />
+      <Shields />
+      <Sorceries />
+      <Spirit />
+      <Talisman />
+      <Weapon />
+      </div>
+      </div>
   );
 }
 
