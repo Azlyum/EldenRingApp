@@ -1,40 +1,28 @@
-import React, { useState, useEffect } from "react";
 import SimpleCard from "../card/card";
+import useFetchData from "../Hooks/useFetchData";
 
-const EldenRingApi = () => {
-  const [data, setData] = useState(null);
+const EldenRingApi = ({ endpoint }) => {
+  const { data, loading, error } = useFetchData(endpoint);
 
-  useEffect(() => {
-    fetch("https://eldenring.fanapis.com/api/ammos")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, []);
+  if (loading) {
+    return <div> Hold tight we are searching for our lost Grace...</div>;
+  }
 
-  const renderData = (obj) => {
-    return Object.keys(obj).map((key) => {
-      const value = obj[key];
-      if (typeof value === "object") {
-        return (
-          <div key={key}>
-            {key}:{renderData(value)}
-            <br />
-          </div>
-        );
-      } else {
-        return (
-          <div key={key}>
-            {key}:{value}
-            <br />
-          </div>
-        );
-      }
-    });
-  };
+  if (error) {
+    return <div>Lost sight of grace: {error.message}</div>;
+  }
 
   return (
     <div>
-      <h2>Ammo's in Elden Ring</h2>
-      <SimpleCard title={data && renderData(data)} />
+      {data.map((item) => (
+        <SimpleCard
+          key={item.id}
+          title={item.name}
+          subTitle={item.type}
+          content={item.description}
+          image={item.image}
+        />
+      ))}
     </div>
   );
 };

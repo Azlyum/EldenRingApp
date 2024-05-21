@@ -11,9 +11,9 @@ const SimpleCard = ({ title, subTitle, content, image }) => {
         width: "1500px",
       }}
     >
-      <h3>{title}</h3>
-      <h4>{subTitle}</h4>
-      <p>{image}</p>
+      <img src={image} alt={title} />
+      <h2>{title}</h2>
+      <h3>{subTitle}</h3>
       <p>{content}</p>
     </div>
   );
