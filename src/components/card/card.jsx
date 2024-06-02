@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import "../../css/Card.css";
 
 const SimpleCard = ({ title, subTitle, content, image }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
-      style={{
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        padding: "16px",
-        margin: "8px",
-        width: "1500px",
-      }}
+      className="card"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <h3>{subTitle}</h3>
-      <p>{content}</p>
+      <img src={image} alt={title} className="imageStyle" />
+      {isHovered && (
+        <div className="card-content">
+          <h3>{title}</h3>
+          <p>{subTitle}</p>
+          <p>{content}</p>
+        </div>
+      )}
     </div>
   );
 };

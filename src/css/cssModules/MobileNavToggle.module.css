@@ -1,0 +1,20 @@
+.toggleButton {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;;
+}
+
+.toggleButton:hover {
+  background-color: #a2d729;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .toggleButton {
+    display: none;
+  }
+}

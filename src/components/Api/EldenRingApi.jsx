@@ -1,5 +1,6 @@
-import SimpleCard from "../card/card";
+import SimpleCard from "../Card/Card";
 import useFetchData from "../Hooks/useFetchData";
+import "../../css/Card.css";
 
 const EldenRingApi = ({ endpoint }) => {
   const { data, loading, error } = useFetchData(endpoint);
@@ -13,7 +14,7 @@ const EldenRingApi = ({ endpoint }) => {
   }
 
   return (
-    <div>
+    <div className="grid-container">
       {data.map((item) => (
         <SimpleCard
           key={item.id}
