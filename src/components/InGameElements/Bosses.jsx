@@ -3,7 +3,7 @@ import EldenRingApi from "../Api/EldenRingApi";
 const Bosses = () => {
   return (
     <div>
-      <h1>Bosses</h1>
+      <h1 id='bosses'>Bosses</h1>
       <EldenRingApi endpoint={"bosses"} />
     </div>
   );

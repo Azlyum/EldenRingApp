@@ -3,7 +3,7 @@ import EldenRingApi from "../Api/EldenRingApi";
 const Ammo = () => {
   return (
     <div>
-      <h1>Ammo</h1>
+      <h1 id='Ammo'>Ammo</h1>
       <EldenRingApi endpoint={"ammos"} />
     </div>
   );

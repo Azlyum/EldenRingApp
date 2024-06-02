@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/Card.css";
 
 const SimpleCard = ({ title, subTitle, content, image }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <img src={image} alt={title} className="imageStyle" />
-        </div>
-        <div className="flip-card-back">
-          <h1>{title}</h1>
+    <div
+      className="card"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <img src={image} alt={title} className="imageStyle" />
+      {isHovered && (
+        <div className="card-content">
+          <h3>{title}</h3>
           <p>{subTitle}</p>
           <p>{content}</p>
         </div>
-      </div>
+      )}
     </div>
   );
 };

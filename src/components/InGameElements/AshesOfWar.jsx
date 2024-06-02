@@ -3,7 +3,7 @@ import EldenRingApi from "../Api/EldenRingApi";
 const AshesOfWar = () => {
   return (
     <div>
-      <h1>AshesOfWar</h1>
+      <h1 id='ashes'>AshesOfWar</h1>
       <EldenRingApi endpoint={"ashes"} />
     </div>
   );

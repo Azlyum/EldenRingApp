@@ -1,5 +1,5 @@
-import SimpleCard from "../Card/card";
-import useFetchData from "../Hooks/useFetchData";
+import SimpleCard from "../Card/Card";
+import useFetchData from "../Hooks/UseFetchData";
 import "../../css/Card.css";
 
 const EldenRingApi = ({ endpoint }) => {

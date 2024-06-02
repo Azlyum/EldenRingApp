@@ -15,13 +15,16 @@ import {
   Sorceries,
   Spirit,
   Talisman,
-  Weapon
-} from './components/InGameElements/Index';
+  Weapon,
+  NavBar
+} from './components/Index.jsx';
 
 function App() {
   return (
+    <>
+    <NavBar />
     <div className="App-background">
-    <div className="foo">
+    <div className="App-contents">
       <h1>Elden Ring Project</h1>
       <p>
         This is a Project i created for myself <br />I am also wanting to show
@@ -29,7 +32,7 @@ function App() {
         this page usefull and interesting as i delve deep into elden ring lore
       </p>
 
-      <img src="./EldenRingMain01.jpg" alt="of the cover art for Elden Ring" />
+      {/* <img src="./EldenRingMain01.jpg" alt="of the cover art for Elden Ring" /> */}
     </div>
     <div>
        <Ammo />
@@ -49,6 +52,7 @@ function App() {
       <Weapon />
       </div>
       </div>
+      </>
   );
 }
 

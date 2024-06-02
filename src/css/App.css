@@ -1,17 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
 
 .App-background {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: white;
+  background-image: url(../../public/elden-ring-bg.jpg) ;
+
 }
 
-.foo{
+.App-contents{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
 }
+
